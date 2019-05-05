@@ -1,0 +1,40 @@
+table {
+  width: 100% !important;
+  margin: 20px auto;
+}
+
+.pagination {
+  margin: 0 auto;
+}
+
+.CodeMirror-scroll {
+  background: rgba(242, 243, 196, 0.801);
+}
+
+.post-controls {
+  margin: 0 auto !important;
+  width: 40% !important;
+}
+
+.post-controls p {
+  margin-top: 13px;
+}
+
+.post-controls button {
+  margin-top: 20px !important;
+}
+
+.post-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post-details .post-tile {
+  font-size: 1.3rem;
+  color: #272727;
+}
+
+.post-details .post-author {
+  font-size: 1rem;
+  color: #606060;
+}

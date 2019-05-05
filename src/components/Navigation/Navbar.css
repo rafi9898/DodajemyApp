@@ -1,0 +1,26 @@
+.topNavbar {
+  background-color: #3949ab;
+}
+
+.nav-link {
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #ddd !important;
+}
+
+.main-logo {
+  width: 55%;
+}
+
+.profile-btn {
+  padding: 0 10px 0 10px;
+  box-shadow: 0px 0px 4px #333;
+  background: #ff5061;
+}
+
+.dropdown-menu {
+  margin-left: -90px !important;
+}

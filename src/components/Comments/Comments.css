@@ -1,0 +1,43 @@
+.comments-list-box .section-title {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #606060;
+}
+
+.comment {
+  display: flex;
+}
+
+.avatar {
+  margin-top: 17px;
+}
+
+.avatar span {
+  border-radius: 90%;
+  background-color: #ff5061;
+  padding: 15px;
+  color: #fff;
+  text-shadow: 0px 0px 5px #333;
+}
+
+.comment-content-box {
+  max-width: 50% !important;
+}
+
+.comment-content-box .content {
+  color: #3f3f3f !important;
+  font-size: 0.9rem;
+}
+
+.comment-content-box .post-author {
+  color: #3f3f3f;
+  font-weight: bold;
+}
+
+.comment-main-box {
+  margin-bottom: 20px;
+}
+
+.create-post-form {
+  margin-bottom: 40px;
+}
