@@ -29,7 +29,6 @@ class CreatePost extends Component {
   createNewPost = e => {
     e.preventDefault();
     this.props.createPost(this.state);
-    console.log(this.props);
     this.props.history.push("/dashboard");
   };
 

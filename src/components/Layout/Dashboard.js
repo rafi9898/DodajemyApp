@@ -9,7 +9,7 @@ import { compose } from "redux";
 
 class Dashboard extends Component {
   render() {
-    const { auth, posts } = this.props;
+    const { auth, posts, profile } = this.props;
     const myPosts =
       posts &&
       posts.filter(post => {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
             className="text-center title-dashboard"
             style={{ fontSize: "1.4rem" }}
           >
-            Witaj użytkowniku: {auth.email}
+            Witaj użytkowniku: {profile.firstName} {profile.lastName}
           </h2>
           <PostList posts={myPosts} />
         </Container>
@@ -36,7 +36,8 @@ class Dashboard extends Component {
 const mapStateToProps = state => {
   return {
     posts: state.firestore.ordered.posts,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
   };
 };
 

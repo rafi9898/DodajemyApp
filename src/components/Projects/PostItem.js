@@ -7,7 +7,11 @@ const PostItem = ({ post }) => {
   return (
     <tr>
       <td>{moment(post.createdAt.toDate()).calendar()}</td>
-      <td>{post.postTitle}</td>
+      <td>
+        {post.postTitle.length > 27
+          ? post.postTitle.substring(0, 27) + "..."
+          : post.postTitle}
+      </td>
       <td>
         {post.authorFirstName} {post.authorLastName}
       </td>

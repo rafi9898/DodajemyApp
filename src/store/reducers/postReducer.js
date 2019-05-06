@@ -1,14 +1,5 @@
 const initState = {
-  posts: [
-    {
-      id: "1",
-      postTitle: "Gramy w piłkę nożną",
-      author: "Rafał Podraza",
-      postContent: "blah\nasdasda\n\nxddddd",
-      url: "ZOBACZ",
-      postType: "PUBLICZNY"
-    }
-  ]
+  posts: []
 };
 
 const postReducer = (state = initState, action) => {
