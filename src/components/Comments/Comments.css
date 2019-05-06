@@ -6,6 +6,7 @@
 
 .comment {
   display: flex;
+  padding: 5px;
 }
 
 .avatar {
@@ -22,16 +23,21 @@
 
 .comment-content-box {
   max-width: 50% !important;
+  box-shadow: 0px 0px 1px #333;
+  border-radius: 15px 0px;
+  margin-left: 10px;
 }
 
 .comment-content-box .content {
   color: #3f3f3f !important;
   font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 .comment-content-box .post-author {
   color: #3f3f3f;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .comment-main-box {

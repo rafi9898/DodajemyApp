@@ -61,7 +61,7 @@ class PostList extends Component {
           <Table className="text-center" striped bordered hover>
             <thead>
               <tr>
-                <th>ID</th>
+                <th>Data</th>
                 <th>Tytuł</th>
                 <th>Dodał</th>
                 <th>Link</th>

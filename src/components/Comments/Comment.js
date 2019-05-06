@@ -1,19 +1,25 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import "./Comments.css";
+import moment from "moment";
+import "moment/locale/pl";
 
-const Comment = () => {
+const Comment = props => {
+  const { comment } = props;
   return (
     <Col className="comment-main-box" md="12">
       <div className="comment text-left">
         <div className="avatar">
-          <span>RP</span>
+          <span>{comment.initials}</span>
         </div>
 
         <Col md="12" className="comment-content-box">
-          <p className="content">Bardzo dobrze napisany kod ;)</p>
+          <p className="content">{comment.content}</p>
           <p>
-            <span className="post-author">Rafał Podraza - wysłano 14:21</span>
+            <span className="post-author">
+              {comment.authorFirstName} {comment.authorLastName} - [
+              {moment(comment.createdAt.toDate()).calendar()}]
+            </span>
           </p>
         </Col>
       </div>

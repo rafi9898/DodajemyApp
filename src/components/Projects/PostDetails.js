@@ -9,14 +9,18 @@ import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 
 const PostDetails = props => {
-  const { post } = props;
+  const { post, postId } = props;
   if (post) {
     return (
       <section className="post-details">
         <Container>
           <Row>
             <Col md="6">
-              <h3 className="post-tile text-left">{post.postTitle}</h3>
+              <h3 className="post-tile text-left">
+                {post.postTitle.length > 27
+                  ? post.postTitle.substring(0, 27) + "..."
+                  : post.postTitle}
+              </h3>
             </Col>
 
             <Col md="6">
@@ -40,11 +44,11 @@ const PostDetails = props => {
             </Col>
 
             <Col md="12">
-              <CommentsList />
+              <CommentsList postId={postId} />
             </Col>
 
             <Col md="12">
-              <CreateComment />
+              <CreateComment postId={postId} />
             </Col>
           </Row>
         </Container>
@@ -68,7 +72,8 @@ const mapStateToProps = (state, ownProps) => {
   const posts = state.firestore.data.posts;
   const post = posts ? posts[id] : null;
   return {
-    post: post
+    post: post,
+    postId: id
   };
 };
 
