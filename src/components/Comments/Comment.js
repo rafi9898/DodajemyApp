@@ -14,7 +14,7 @@ const Comment = props => {
         </div>
 
         <Col md="12" className="comment-content-box">
-          <p className="content">{comment.content}</p>
+          <textarea readonly className="content" value={comment.content} />
           <p>
             <span className="post-author">
               {comment.authorFirstName} {comment.authorLastName} - [

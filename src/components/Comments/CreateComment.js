@@ -18,7 +18,6 @@ class CreateComment extends Component {
 
   addNewComment = e => {
     e.preventDefault();
-    console.log(this.state.postId);
     this.props.createComment(this.state);
     this.setState({
       content: "",

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Table } from "react-bootstrap";
+import { Container, Row, Table, Button } from "react-bootstrap";
 import Search from "../SearchBox/Search";
 import PostItem from "./PostItem";
 import "./Post.css";
@@ -8,6 +8,7 @@ class PostList extends Component {
   state = {
     currentPosts: [],
     active: 1,
+    postsNumber: 0,
     showCurrentPost: false
   };
 
@@ -40,19 +41,63 @@ class PostList extends Component {
     }
   };
 
+  changeActivePage = e => {
+    let currentPage = this.state.active;
+    switch (e.target.id) {
+      case "more":
+        this.setState({
+          active: ++currentPage
+        });
+        break;
+      case "hide":
+        this.setState({
+          active: 1
+        });
+        break;
+      default:
+        console.log("brak akcji");
+    }
+  };
+
+  componentDidMount() {
+    const postsNumber = !this.state.showCurrentPost
+      ? this.props.posts && this.props.posts.length
+      : this.state.currentPosts.length;
+
+    this.setState({
+      postsNumber
+    });
+  }
+
   render() {
     const items = !this.state.showCurrentPost
       ? this.props.posts &&
-        this.props.posts
-          .slice((this.state.active - 1) * 5, this.state.active * 5)
-          .map(post => {
-            return <PostItem key={post.id} post={post} />;
-          })
-      : this.state.currentPosts
-          .slice((this.state.active - 1) * 5, this.state.active * 5)
-          .map(post => {
-            return <PostItem key={post.id} post={post} />;
-          });
+        this.props.posts.slice(0, this.state.active * 5).map(post => {
+          return <PostItem key={post.id} post={post} />;
+        })
+      : this.state.currentPosts.slice(0, this.state.active * 5).map(post => {
+          return <PostItem key={post.id} post={post} />;
+        });
+
+    const totalPage = Math.ceil(this.state.postsNumer / 5);
+    const pagination =
+      totalPage && totalPage < 2 ? null : (
+        <div className="text-center">
+          {this.state.active === totalPage ? (
+            <Button
+              onClick={this.changeActivePage}
+              id="hide"
+              variant="secondary"
+            >
+              SCHOWAJ
+            </Button>
+          ) : (
+            <Button onClick={this.changeActivePage} id="more" variant="primary">
+              WIĘCEJ
+            </Button>
+          )}
+        </div>
+      );
 
     return (
       <Container>
@@ -70,6 +115,7 @@ class PostList extends Component {
             <tbody>{items}</tbody>
           </Table>
         </Row>
+        {pagination}
       </Container>
     );
   }
