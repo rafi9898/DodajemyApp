@@ -32,6 +32,10 @@
   color: #3f3f3f !important;
   font-size: 0.9rem;
   margin-top: 10px;
+  width: 100%;
+  overflow-y: inherit;
+  overflow-x: hidden;
+  border: none;
 }
 
 .comment-content-box .post-author {
@@ -46,4 +50,10 @@
 
 .create-post-form {
   margin-bottom: 40px;
+}
+
+.comments-arrow {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
 }
