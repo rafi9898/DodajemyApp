@@ -8,7 +8,6 @@ class PostList extends Component {
   state = {
     currentPosts: [],
     active: 1,
-    postsNumber: 0,
     showCurrentPost: false
   };
 
@@ -59,16 +58,6 @@ class PostList extends Component {
     }
   };
 
-  componentDidMount() {
-    const postsNumber = !this.state.showCurrentPost
-      ? this.props.posts && this.props.posts.length
-      : this.state.currentPosts.length;
-
-    this.setState({
-      postsNumber
-    });
-  }
-
   render() {
     const items = !this.state.showCurrentPost
       ? this.props.posts &&
@@ -79,7 +68,10 @@ class PostList extends Component {
           return <PostItem key={post.id} post={post} />;
         });
 
-    const totalPage = Math.ceil(this.state.postsNumer / 5);
+    const postsNumber = !this.state.showCurrentPost
+      ? this.props.posts && this.props.posts.length
+      : this.state.currentPosts.length;
+    const totalPage = Math.ceil(postsNumber / 5);
     const pagination =
       totalPage && totalPage < 2 ? null : (
         <div className="text-center">
