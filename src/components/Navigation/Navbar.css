@@ -1,5 +1,6 @@
 .topNavbar {
   background-color: #3949ab;
+  text-align: center;
 }
 
 .nav-link {
@@ -11,8 +12,13 @@
   color: #ddd !important;
 }
 
+.dropdown-menu {
+  margin-left: -90px !important;
+}
+
 .main-logo {
   width: 55%;
+  float: left;
 }
 
 .profile-btn {
@@ -21,6 +27,49 @@
   background: #ff5061;
 }
 
-.dropdown-menu {
-  margin-left: -90px !important;
+.mobile-logo {
+  display: none !important;
+}
+
+.signout-btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .signout-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  .signout-btn:hover {
+    color: #ddd;
+  }
+  .profile-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 978px) {
+  .main-logo {
+    width: 40%;
+  }
+}
+
+@media (max-width: 642px) {
+  .main-logo {
+    display: none !important;
+  }
+  .mobile-logo {
+    display: inline-block !important;
+    color: #fff !important;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 296px) {
+  .mobile-logo {
+    display: none !important;
+  }
 }

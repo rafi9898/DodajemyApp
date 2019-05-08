@@ -15,6 +15,7 @@ const NavbarBox = props => {
       <Navbar.Brand>
         <Link to="/">
           <img className="main-logo" src={Logo} alt="Main Logo" />
+          <h2 className="mobile-logo">Dodajemy.eu</h2>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

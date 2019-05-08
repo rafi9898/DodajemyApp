@@ -20,6 +20,9 @@ const SignOutLinks = props => {
       >
         <NavDropdown.Item onClick={props.signOut}>Wyloguj</NavDropdown.Item>
       </NavDropdown>
+      <p className="signout-btn" onClick={props.signOut}>
+        Wyloguj
+      </p>
     </Nav>
   );
 };

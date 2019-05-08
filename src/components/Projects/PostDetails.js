@@ -7,6 +7,7 @@ import "../../../node_modules/codemirror/lib/codemirror.css";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
+import "./Post.css";
 
 const PostDetails = props => {
   const { post, postId } = props;
