@@ -57,3 +57,9 @@
   cursor: pointer;
   color: #333;
 }
+
+@media (max-width: 780px) {
+  .comment-content-box {
+    max-width: 100% !important;
+  }
+}

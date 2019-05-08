@@ -38,3 +38,39 @@ table {
   font-size: 1rem;
   color: #606060;
 }
+
+@media (max-width: 400px) {
+  .table {
+    font-size: 0.6rem;
+  }
+
+  .new-post .title-input {
+    font-size: 1rem;
+  }
+
+  .new-post .title-type-post {
+    font-size: 0.9rem;
+  }
+
+  .new-post .post-type-field {
+    font-size: 0.8rem;
+  }
+
+  .new-post .create-post-btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .post-details .post-tile {
+    font-size: 1rem;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .post-details .post-author {
+    font-size: 0.9rem;
+    display: block !important;
+    text-align: center !important;
+  }
+}

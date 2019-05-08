@@ -61,18 +61,22 @@ class CreatePost extends Component {
             />
             <Row>
               <div className="post-controls text-center">
-                <p className="text-center">Wybierz typ posta</p>
+                <p className="text-center title-type-post">Wybierz typ posta</p>
                 <Form.Control
                   onChange={this.setPostData}
                   id="postType"
                   required
-                  className="text-center"
+                  className="text-center post-type-field"
                   as="select"
                 >
                   <option>PUBLICZNY</option>
                   <option>PRYWATNY</option>
                 </Form.Control>
-                <Button type="submit" variant="success">
+                <Button
+                  className="create-post-btn"
+                  type="submit"
+                  variant="success"
+                >
                   DODAJ WPIS
                 </Button>
               </div>

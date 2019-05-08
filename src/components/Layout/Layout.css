@@ -2,3 +2,9 @@
   margin-top: 30px;
   width: 80% !important;
 }
+
+@media (max-width: 484px) {
+  .title-dashboard {
+    font-size: 1.2rem !important;
+  }
+}
