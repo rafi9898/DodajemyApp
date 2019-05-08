@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<center>
+  <h2>Dodajemy App [Aplikacja React + Redux + React Router + Firestore]</h2> <br />
+  <img src="https://rafal-podraza.pl/img/projekty/dodajemy-github.png" alt="screen" /> <br />
+  <a href="https://dodajemy-eu.firebaseapp.com/">DEMO</a>
+  </center>
 
 ## Available Scripts
 
