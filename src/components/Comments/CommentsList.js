@@ -49,9 +49,9 @@ class CommentsList extends Component {
         return <Comment key={comment.id} comment={comment} />;
       });
 
-    const totalPage = Math.ceil(comments && comments.length / 2);
+    const totalPage = Math.ceil(currentComments && currentComments.length / 2);
     const pagination =
-      comments && comments.length > 2 ? (
+      currentComments && currentComments.length > 2 ? (
         totalPage === this.state.active ? (
           <FontAwesomeIcon
             onClick={this.setCurrentPage}
